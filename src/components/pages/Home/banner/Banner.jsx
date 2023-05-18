@@ -106,8 +106,8 @@ const Banner = () => {
 
 
       <div className="max-w-7xl overflow-hidden mx-auto md:-mt-20 -mt-12  relative rounded-full py-2  md:py-6 bg-[#D2E9E9]">
-        <p className="italic  text-xl left-1/2 -translate-x-1/2  absolute top-2 text-slate-400 text-center font-semibold md:text-2xl">Sponsored By</p>
-            <div className="mt-8  pb-2 ">
+        <p className="italic  text-xl left-1/2 -translate-x-1/2  absolute top-2 text-slate-400 text-center font-semibold md:text-2xl">Connected with</p>
+            <div className="mt-8  pb-1 ">
                 <Marquee className="">
                 <img className="md:w-28 mr-16 w-16 h-16  md:h-28 rounded-full" src="https://img.freepik.com/free-vector/branding-identity-corporate-logo-vector-design-template_460848-13994.jpg?w=740&t=st=1684402039~exp=1684402639~hmac=ea7d9ab5d2508bc94e4ad3e13db84e1b9604b9336b7bde3800441a38d97456eb" alt="" />
 
