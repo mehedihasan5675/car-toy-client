@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import Banner from '../banner/Banner';
 import Gallery from '../gallery/Gallery';
+import ShopCategory from '../shopByCategory/ShopCategory';
 
 const Home = () => {
     const [imgUrl,setImgUrl]=useState([])
@@ -26,15 +27,20 @@ const Home = () => {
     return (
         <div>
             <Banner></Banner>
-            <div  >
+            <div  className='py-10 md:py-16'>
+            <h3 style={{borderBottomRightRadius:'40px',borderTopLeftRadius:'40px'}} className='font-bold text-2xl md:text-4xl italic tracking-wider text-center my-5 px-5 py-2 bg-[#C4DFDF] text-gray-600 w-1/2 mx-auto  '>Our Cars Gallery</h3>
+
                 <Gallery imgUrl={imgUrl} columnCount="3" gap="5"></Gallery>
 
-                <div className='text-center'>
+                <div className='text-center '>
                 {
-                    showall ? <button onClick={handleShowAll} className='btn btn-accent font-bold '>Show less</button>:<button onClick={handleShowAll} className='btn btn-accent font-bold '>Show more</button>
+                    showall ? <button onClick={handleShowAll} className='btn btn-outline btn-accent font-bold '>Show less</button>:<button onClick={handleShowAll} className='btn btn-outline btn-accent  font-bold '>Show more</button>
                 }
                 </div>
             </div>
+
+                <ShopCategory></ShopCategory>
+            
         </div>
     );
 };

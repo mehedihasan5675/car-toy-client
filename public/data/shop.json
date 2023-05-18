@@ -1,0 +1,157 @@
+[
+  {
+    "picture": "https://images.unsplash.com/photo-1676763092563-628ad69c226b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8TW9uc3RlciUyMFRydWNrJTIwdG95c3xlbnwwfHwwfHx8MA%3D%3D&auto=format&fit=crop&w=1000&q=60",
+    "toy_name": "Sports Car",
+    "seller_name": "Toy Galaxy",
+    "seller_email": "sales@toygala.com",
+    "price": 29.99,
+    "rating": 4.5,
+    "available_quantity": 10,
+    "detail_description": "This sleek and speedy sports car toy is perfect for racing enthusiasts. It features realistic design and smooth wheels for high-performance play.",
+    "sub_category": "Sports Cars"
+  },
+
+  {
+    "picture": "https://images.unsplash.com/photo-1661120214065-6126ab7f7e84?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8OXx8Y29uc3RydWN0aW9uJTIwdHJ1Y2slMjB0b3lzfGVufDB8fDB8fHww&auto=format&fit=crop&w=1000&q=60",
+    "toy_name": "Monster Truck",
+    "seller_name": "Toys R Fun",
+    "seller_email": "sales@toysrfun.com",
+    "price": 19.99,
+    "rating": 4.2,
+    "available_quantity": 15,
+    "detail_description": "Rev up the excitement with this monster truck toy. Its large wheels and rugged design make it perfect for off-road adventures and stunts.",
+    "sub_category": "Trucks"
+  },
+
+  {
+    "picture": "https://media.istockphoto.com/id/513434188/photo/little-boys-racing-on-pedal-go-karts.jpg?s=612x612&w=0&k=20&c=v3101UByzLln59YS_St9WQn51jr_fbxSiIOkh6HKp50=",
+    "toy_name": "Family Sedan",
+    "seller_name": "Playtime Toys",
+    "seller_email": "info@playtimetoys.com",
+    "price": 14.99,
+    "rating": 4.0,
+    "available_quantity": 20,
+    "detail_description": "This realistic toy car resembles a typical family sedan. It's great for imaginative play and comes with opening doors and a removable roof.",
+    "sub_category": "Regular Cars"
+  },
+
+  {
+    "picture": "https://media.istockphoto.com/id/516427497/photo/toy-school-buses-souvenirs-for-sale-brooklyn-bridge-new-york.jpg?s=612x612&w=0&k=20&c=_Q2FDllJzlNRkeSQfkQl_-lp7YwBhJ05Vkl4o3-yV4A=",
+    "toy_name": "Mini Police Car",
+    "seller_name": "Tiny Treasures",
+    "seller_email": "info@tinytreasures.com",
+    "price": 12.99,
+    "rating": 4.3,
+    "available_quantity": 12,
+    "detail_description": "Immerse your child in imaginative police play with this mini police car toy. It features working lights and realistic sound effects.",
+    "sub_category": "Mini Police Cars"
+  },
+
+  {
+    "picture": "https://images.unsplash.com/photo-1650574583424-fbbfde0ffc28?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8Rm9ybXVsYSUyMDElMjBDYXIlMjB0b3lzfGVufDB8fDB8fHww&auto=format&fit=crop&w=1000&q=60",
+    "toy_name": "Formula 1 Car",
+    "seller_name": "Speedy Toys",
+    "seller_email": "sales@speedytoys.com",
+    "price": 34.99,
+    "rating": 4.7,
+    "available_quantity": 5,
+    "detail_description": "Experience the thrill of racing with this Formula 1 car toy. Its aerodynamic design and realistic decals make it a must-have for racing enthusiasts.",
+    "sub_category": "Sports Cars"
+  },
+
+  {
+    "picture": "https://images.unsplash.com/photo-1609244219150-cfa8e42ba8f1?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTV8fGNvbnN0cnVjdGlvbiUyMHRydWNrJTIwdG95c3xlbnwwfHwwfHx8MA%3D%3D&auto=format&fit=crop&w=1000&q=60",
+    "toy_name": "Construction Truck",
+    "seller_name": "Build It Up",
+    "seller_email": "info@buildituptoys.com",
+    "price": 21.99,
+    "rating": 4.4,
+    "available_quantity": 10,
+    "detail_description": "Let your child's imagination run wild with this construction truck toy. It features movable parts and is perfect for building and digging play.",
+    "sub_category": "Trucks"
+  },
+
+  {
+    "picture": "https://media.istockphoto.com/id/1390990929/photo/black-model-taxi-london-skyline-concept.jpg?s=612x612&w=0&k=20&c=9SU-_8PlrL8mkybUIaBRTyU-qmHJhAuq5L3-gFBcTww=",
+    "toy_name": "City Taxi",
+    "seller_name": "Urban Toys",
+    "seller_email": "sales@urbantoys.com",
+    "price": 16.99,
+    "rating": 4.3,
+    "available_quantity": 8,
+    "detail_description": "This yellow taxi cab toy is ready to navigate the city streets. It's great for pretend play and helps develop fine motor skills.",
+    "sub_category": "Regular Cars"
+  },
+
+  {
+    "picture": "https://media.istockphoto.com/id/1436192947/photo/a-toy-police-car-on-the-floor-in-the-children-s-room-close-up-accident-the-crash-of-two-toy.jpg?s=612x612&w=0&k=20&c=1uHH_CahO7enk4x3HIdbEEqyS3zhtLdxKNeO_3Vd1hw=",
+    "toy_name": "Patrol Car",
+    "seller_name": "Safety Toys",
+    "seller_email": "sales@safetytoys.com",
+    "price": 13.99,
+    "rating": 4.2,
+    "available_quantity": 12,
+    "detail_description": "Keep the city safe with this patrol car toy. It has flashing lights, realistic siren sounds, and removable police accessories.",
+    "sub_category": "Mini Police Cars"
+  },
+
+  {
+    "picture": "https://images.unsplash.com/photo-1672467575273-2918d93d00ce?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1169&q=80",
+    "toy_name": "Racing Car",
+    "seller_name": "Speedster Toys",
+    "seller_email": "sales@speedstertoys.com",
+    "price": 32.99,
+    "rating": 4.8,
+    "available_quantity": 7,
+    "detail_description": "Get ready to race with this high-speed racing car toy. Its sleek design, vibrant colors, and smooth wheels make it perfect for thrilling races.",
+    "sub_category": "Sports Cars"
+  },
+
+  {
+    "picture": "https://images.unsplash.com/photo-1663173775686-d1529e901713?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8ZHVtcCUyMHRydWNrJTIwdG95c3xlbnwwfHwwfHx8MA%3D%3D&auto=format&fit=crop&w=1000&q=60",
+    "toy_name": "Dump Truck",
+    "seller_name": "Mighty Builders",
+    "seller_email": "info@mightybuilders.com",
+    "price": 23.99,
+    "rating": 4.4,
+    "available_quantity": 9,
+    "detail_description": "Unleash your child's creativity with this dump truck toy. It features a tilting bed and is great for hauling and dumping small items.",
+    "sub_category": "Trucks"
+  },
+
+  {
+    "picture": "https://media.istockphoto.com/id/183891965/photo/robotic-hands-holding-sport-car.jpg?s=612x612&w=0&k=20&c=BzU9vGSehxL6dQu4kbq9tf9TWaZOO6J-RhJTJqq2nHE=",
+    "toy_name": "Sedan Car",
+    "seller_name": "Funville Toys",
+    "seller_email": "sales@funvilletoys.com",
+    "price": 18.99,
+    "rating": 4.3,
+    "available_quantity": 11,
+    "detail_description": "Cruise through the city in style with this sedan car toy. Its realistic design and smooth rolling wheels make it perfect for imaginative play.",
+    "sub_category": "Regular Cars"
+  },
+
+  {
+    "picture": "https://media.istockphoto.com/id/139539233/photo/firefighters-and-police.jpg?s=612x612&w=0&k=20&c=8AB63DtBuVYLtVcBGay96-dgfPLxBvc0tyVxXa7gcbE=",
+    "toy_name": "Elite Forced ",
+    "seller_name": "Wite Toys",
+    "seller_email": "sales@elitetoys.com",
+    "price": 15.99,
+    "rating": 4.1,
+    "available_quantity": 13,
+    "detail_description": "Stage thrilling rescue missions with this SWAT van toy. It comes with opening doors, removable accessories, and a fearless SWAT team figure.",
+    "sub_category": "Mini Police Cars"
+  },
+
+  {
+    "picture": "https://media.istockphoto.com/id/174845684/photo/classic-old-timer-car.jpg?s=612x612&w=0&k=20&c=TKvrvsdni5vt7YciufkT7Jk7z8gWhj05BwTfoIkb1Aw=",
+    "toy_name": "Classic Vintage Car",
+    "seller_name": "Retro Toys",
+    "seller_email": "sales@retrotoys.com",
+    "price": 39.99,
+    "rating": 4.7,
+    "available_quantity": 4,
+    "detail_description": "Take a trip down memory lane with this classic vintage car toy. Its elegant design and nostalgic charm make it a collector's favorite.",
+    "sub_category": "Regular Cars"
+  }
+]

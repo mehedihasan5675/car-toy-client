@@ -1,3 +1,11 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.react-tabs__tab {
+  border: none;
+  border-radius: 50px;
+  font-weight: 600;
+  font-style: italic;
+  margin-left: 20px;
+}
