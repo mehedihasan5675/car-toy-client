@@ -9,3 +9,14 @@
   font-style: italic;
   margin-left: 20px;
 }
+.slick-next {
+  margin-right: 40px;
+}
+.slick-prev {
+  margin-left: 40px;
+  z-index: 1;
+}
+.slick-dots {
+  margin-bottom: 5px;
+  padding-bottom: 40px;
+}

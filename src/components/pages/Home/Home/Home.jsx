@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import Banner from '../banner/Banner';
 import Gallery from '../gallery/Gallery';
 import ShopCategory from '../shopByCategory/ShopCategory';
+import Testimonial from '../testimonial/Testimonial';
 
 const Home = () => {
     const [imgUrl,setImgUrl]=useState([])
@@ -28,7 +29,7 @@ const Home = () => {
         <div>
             <Banner></Banner>
             <div  className='py-10 md:py-16'>
-            <h3 style={{borderBottomRightRadius:'40px',borderTopLeftRadius:'40px'}} className='font-bold text-2xl md:text-4xl italic tracking-wider text-center my-5 px-5 py-2 bg-[#C4DFDF] text-gray-600 w-1/2 mx-auto  '>Our Cars Gallery</h3>
+            <h3 style={{borderBottomRightRadius:'40px',borderTopLeftRadius:'40px'}} className='font-bold text-2xl md:text-4xl italic tracking-wider text-center mt-16 px-5 py-2 bg-[#C4DFDF] text-gray-600 w-1/2 mx-auto  '>Our Cars Gallery</h3>
 
                 <Gallery imgUrl={imgUrl} columnCount="3" gap="5"></Gallery>
 
@@ -40,6 +41,7 @@ const Home = () => {
             </div>
 
                 <ShopCategory></ShopCategory>
+                <Testimonial></Testimonial>
             
         </div>
     );
