@@ -10,8 +10,8 @@ const ShopNow = () => {
     <div className="w-full text-center">
       <h1 className="mb-5 mx-auto w-full md:w-8/12 text-3xl md:text-5xl font-bold tracking-wider italic">THE QUALITY TOYS OF YOUR
 CHILD’S DREAMS</h1>
-      <p className="mb-5 my-7 mx-auto w-full md:w-8/12 italic tracking-widest">If you’re looking for a toy shop then look no further.
-Go on, trat the kids with out huge selection of online toys shops.With an extensive range of top-tier toy cars, they have the power to transform playtime into an immersive experience that sparks their imagination and fosters endless hours of excitement.</p>
+      <p className="mb-5 my-7 mx-auto w-full  md:w-8/12 italic tracking-wide  md:tracking-widest">If you’re looking for a toy shop then look no further.
+Go on, trat the kids with out huge selection of online toys shops.With an extensive range of top-tier toy cars, they have the power to transform playtime into an immersive experience.</p>
       <button className="btn bg-[#C4DFDF] border-none duration-500 hover:bg-[#c4dfdfe3] text-black font-bold">Shop Now</button>
     </div>
   </div>

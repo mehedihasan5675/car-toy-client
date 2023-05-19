@@ -3,11 +3,13 @@ import { FaCarCrash } from 'react-icons/fa';
 const Footer = () => {
   return (
     <div >
+      <h3 style={{borderBottomRightRadius:'40px',borderTopLeftRadius:'40px'}} className='font-bold text-2xl md:text-4xl italic tracking-wider text-center  px-5 py-2 bg-[#C4DFDF] text-gray-600 w-1/2 mx-auto  '>Thanks for contact</h3>
       <footer className=" bg-[#E3F4F4]">
+      
       <div className="max-w-7xl mx-auto py-10 ">
             <a className="btn px-0 btn-ghost  normal-case text-xl"><span className="text-[#376060]   text-5xl md:text-6xl "><FaCarCrash></FaCarCrash></span><span className="text-black font-bold text-3xl">Trus</span> <span className="text-rose-600 font-bold text-3xl md:text-3xl">Toy</span></a>
             </div>
-        <div className="max-w-7xl footer  px-5 md:px-10 pb-20 mx-auto">
+        <div className="max-w-7xl grid grid-cols-2  lg:grid-cols-4 footer  px-5 md:px-10 pb-20 mx-auto">
             
         <div>
           <span className="footer-title">Services</span>
@@ -31,17 +33,17 @@ const Footer = () => {
         </div>
         <div>
           <span className="footer-title">Newsletter</span>
-          <div className="form-control w-80">
+          <div className="form-control  w-full">
             <label className="label">
               <span className="label-text">Enter your email address</span>
             </label>
-            <div className="relative">
+            <div className="relative ">
               <input
                 type="text"
                 placeholder="username@site.com"
                 className="input input-bordered w-full pr-16"
               />
-              <button className="btn btn-primary absolute top-0 right-0 rounded-l-none">
+              <button className="btn border-none duration-300 hover:bg-[#c4ebeb] bg-[#C4DFDF] absolute top-0 right-0  text-gray-700 text-xs md:text-sm w-6/12 md:w-4/12 rounded-l-none">
                 Subscribe
               </button>
             </div>
