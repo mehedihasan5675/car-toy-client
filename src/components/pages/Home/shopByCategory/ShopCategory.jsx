@@ -22,7 +22,7 @@ const ShopCategory = () => {
         })
     },[categoryName])
   return (
-    <div className="py-16">
+    <div className="pt-24 pb-16">
       <h3
         style={{ borderBottomRightRadius: "40px", borderTopLeftRadius: "40px" }}
         className="font-bold text-2xl md:text-4xl italic tracking-wider text-center  px-5 py-2 bg-[#C4DFDF] text-gray-600 w-1/2 mx-auto  "
