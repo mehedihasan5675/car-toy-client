@@ -1,15 +1,25 @@
-import React from 'react';
+import React, { useContext } from 'react';
+import { AuthContext } from '../../../../AuthProvider/AuthProvider';
 import ActiveLink from '../ActiveLink/ActiveLink';
 
 const Menubar = () => {
+  const {user,logOut}=useContext(AuthContext)
+  
     const navMenu=<>
+    
     <li><ActiveLink to="">Home</ActiveLink></li>
-    <li><ActiveLink to="">All Toys</ActiveLink></li>
-    <li><ActiveLink to="">My Toys</ActiveLink></li>
-    <li><ActiveLink to="">Add A Toy</ActiveLink></li>  
     <li><ActiveLink to="">Blogs</ActiveLink></li>
-    <li><ActiveLink to="/login">Login</ActiveLink></li>
-    <li><ActiveLink to="/register">Sing Up</ActiveLink></li>
+      
+    {
+      user ? <>
+      <li><ActiveLink to="">All Toys</ActiveLink></li>
+    <li><ActiveLink to="">My Toys</ActiveLink></li>
+    <li><ActiveLink to="">Add A Toy</ActiveLink></li>
+      </>:<>
+      
+      </>
+    }
+    <li><ActiveLink to="">Contact us</ActiveLink></li>
     </>
 return (
     <div className=' max-w-7xl mx-auto '>

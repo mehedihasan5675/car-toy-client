@@ -1,10 +1,12 @@
 import { updateProfile } from 'firebase/auth';
 import React, { useContext, useState } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import Swal from 'sweetalert2';
 import { AuthContext } from '../../../AuthProvider/AuthProvider';
 const Register = () => {
-    const {createUser}=useContext(AuthContext)
+    const navigate=useNavigate()
+
+    const {createUser,logOut}=useContext(AuthContext)
     const [error,setError]=useState('')
     const handleRegisterBtn=(e)=>{
         e.preventDefault()
@@ -27,10 +29,14 @@ const Register = () => {
           }
         createUser(email,password)
         .then(result=>{
+            logOut()
+            .then(()=>{})
+            .catch(()=>{})
             const currentUser=result.user
             userUpdate(currentUser,name,photoUrl)
             console.log(currentUser);
             setError('')
+
             Swal.fire({
                 title: 'Success!',
                 text: 'user register successfully!',
@@ -38,6 +44,7 @@ const Register = () => {
                 timer:4000,
                 confirmButtonText: 'Cool'
               })
+              navigate('/login')
         })
         .catch(error=>{
             console.log(error.message);

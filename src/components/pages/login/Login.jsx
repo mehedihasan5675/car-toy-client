@@ -30,6 +30,24 @@ const Login = () => {
   }
 
   //google submit
+ const handleGoogleSubmit=()=>{
+    GoogleLogIn()
+    .then(()=>{
+        Swal.fire({
+            title: 'Success!',
+            text: 'Login successfully!',
+            icon: 'success',
+            timer:4000,
+            confirmButtonText: 'Go'
+          })
+
+
+    })
+    .catch((error)=>{
+        console.log(error.message);
+        setError(error.message.slice(9, -1))
+    })
+ }
 
   return (
     <div>
