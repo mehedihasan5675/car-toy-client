@@ -1,6 +1,6 @@
 import React from 'react';
 const ShopCart = ({toy}) => {
-    console.log(toy)
+    // console.log(toy)
     const {picture,price,rating,toy_name}=toy
     return (
         <div className='mx-auto '>

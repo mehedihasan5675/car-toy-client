@@ -1,6 +1,8 @@
-import React from "react";
+import React, { useContext } from "react";
+import { AuthContext } from "../../../AuthProvider/AuthProvider";
 
 const Login = () => {
+    const {name}=useContext(AuthContext)
   return (
     <div>
       <div className=" min-h-screen bg-[#E3F4F4]">

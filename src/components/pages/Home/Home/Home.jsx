@@ -10,7 +10,6 @@ const Home = () => {
     const [showall,setShowall]=useState(false)
     const handleShowAll=()=>{
         setShowall(!showall)
-        console.log('hu',showall);
         
     }
     useEffect(()=>{
