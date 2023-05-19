@@ -3,6 +3,7 @@ import Banner from '../banner/Banner';
 import Gallery from '../gallery/Gallery';
 import ShopCategory from '../shopByCategory/ShopCategory';
 import Testimonial from '../testimonial/Testimonial';
+import ShopNow from './ShopNow/ShopNow';
 
 const Home = () => {
     const [imgUrl,setImgUrl]=useState([])
@@ -42,6 +43,7 @@ const Home = () => {
 
                 <ShopCategory></ShopCategory>
                 <Testimonial></Testimonial>
+                <ShopNow></ShopNow>
             
         </div>
     );
