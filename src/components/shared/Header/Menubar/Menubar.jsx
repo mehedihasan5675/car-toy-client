@@ -1,18 +1,33 @@
 import React, { useContext } from 'react';
+import { Link } from 'react-router-dom';
 import { AuthContext } from '../../../../AuthProvider/AuthProvider';
 import ActiveLink from '../ActiveLink/ActiveLink';
 
 const Menubar = () => {
   const {user,logOut}=useContext(AuthContext)
-  
+  const handleLogOut=()=>{
+    
+    logOut()
+    .then(()=>{
+      Swal.fire({
+        title: 'Success',
+        text: 'Log Out Done!',
+        icon: 'info',
+        timer:4000,
+        confirmButtonText: 'Go'
+      })
+    })
+    .catch(()=>{})
+  }
     const navMenu=<>
     
     <li><ActiveLink to="">Home</ActiveLink></li>
+    <li><ActiveLink to="">All Toys</ActiveLink></li>
+
     <li><ActiveLink to="">Blogs</ActiveLink></li>
       
     {
       user ? <>
-      <li><ActiveLink to="">All Toys</ActiveLink></li>
     <li><ActiveLink to="">My Toys</ActiveLink></li>
     <li><ActiveLink to="">Add A Toy</ActiveLink></li>
       </>:<>
@@ -44,6 +59,17 @@ return (
 </ul>
 </div>
 <div className="navbar-end">
+{
+          user ? <div className=" flex justify-end gap-3">
+          <button onClick={handleLogOut} className="btn btn-active btn-ghost font-bold text-gray-950  tracking-wider">Log Out</button>
+            
+          </div>
+           :
+          <div className=" flex justify-end gap-3">
+            <Link to="/login"><button className='btn btn-active btn-ghost  text-gray-950 font-bold tracking-wider'>Log in</button></Link>
+            
+          </div>
+        }
 </div>
 </div>
     </div>

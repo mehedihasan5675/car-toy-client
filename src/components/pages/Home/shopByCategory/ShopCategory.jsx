@@ -7,13 +7,20 @@ import truck from "../../../../assets/truck.json";
 import ShopCart from "./shopCart";
 const ShopCategory = () => {
     const [toys,setToys]=useState([])
+    const [categoryName,setCategoryName]=useState('Sports Cars')
+    const handleCategoryName=(cateName)=>{
+      setCategoryName(cateName)
+
+    }
+    console.log(categoryName);
+
     useEffect(()=>{
-        fetch(`./data/shop.json`)
+        fetch(`http://localhost:5000/alltoys/${categoryName}`)
         .then(res=>res.json())
         .then(data=>{
             setToys(data)
         })
-    },[])
+    },[categoryName])
   return (
     <div className="py-16">
       <h3
@@ -35,29 +42,29 @@ const ShopCategory = () => {
         <Tabs >
         
           <TabList style={{ borderBottomRightRadius: "40px", borderTopLeftRadius: "40px" }} className="bg-[#D2E9E9] mb-5 px-2 py-2 ">
-            <Tab>Sports Cars</Tab>
-            <Tab>Regular Cars</Tab>
-            <Tab>Mini Police Cars</Tab>
+            <Tab onClick={()=>handleCategoryName("Sports Cars")}>Sports Cars</Tab>
+            <Tab onClick={()=>handleCategoryName("Regular Cars")}>Regular Cars</Tab>
+            <Tab onClick={()=>handleCategoryName("Mini Police Cars")}>Mini Police Cars</Tab>
           </TabList>
 
           <TabPanel>
             <div className="grid md:grid-cols-2 gap-5  lg:grid-cols-3 justify-center">
                 {
-                    toys.slice(0,3).map((toy,i)=><ShopCart toy={toy} key={i}></ShopCart>)
+                    toys?.slice(0,3).map((toy,i)=><ShopCart toy={toy} key={i}></ShopCart>)
                 }
             </div>
           </TabPanel>
           <TabPanel>
           <div className="grid md:grid-cols-2 gap-5  lg:grid-cols-3 justify-center">
                 {
-                    toys.slice(0,3).map((toy,i)=><ShopCart toy={toy} key={i}></ShopCart>)
+                    toys?.slice(0,3).map((toy,i)=><ShopCart toy={toy} key={i}></ShopCart>)
                 }
             </div>
           </TabPanel>
           <TabPanel>
           <div className="grid md:grid-cols-2 gap-5 lg:grid-cols-3 justify-center">
                 {
-                    toys.slice(0,3).map((toy,i)=><ShopCart toy={toy} key={i}></ShopCart>)
+                    toys?.slice(0,3).map((toy,i)=><ShopCart toy={toy} key={i}></ShopCart>)
                 }
             </div>
           </TabPanel>

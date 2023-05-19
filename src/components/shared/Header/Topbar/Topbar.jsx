@@ -1,28 +1,14 @@
 import React, { useContext } from "react";
 import { FaCarCrash } from 'react-icons/fa';
-import { Link } from "react-router-dom";
 import { AuthContext } from "../../../../AuthProvider/AuthProvider";
 const Topbar = () => {
   const {user,logOut}=useContext(AuthContext)
   console.log(user);
-  const handleLogOut=()=>{
-    
-    logOut()
-    .then(()=>{
-      Swal.fire({
-        title: 'Success',
-        text: 'Log Out Done!',
-        icon: 'info',
-        timer:4000,
-        confirmButtonText: 'Go'
-      })
-    })
-    .catch(()=>{})
-  }
-  // <button onClick={handleLogOut} className="btn btn-active btn-ghost">Log Out</button>
+ 
+  
   return (
     <div className="bg-[#C4DFDF] ">
-      <div className="navbar gap-5 max-w-7xl mx-auto  justify-between">
+      <div className="navbar gap-5 flex  max-w-7xl mx-auto  justify-between">
         <div className="navbar flex-shrink-0 w-4/12">
           <a className="btn px-0 btn-ghost  normal-case text-xl"><span className="text-[#376060]   text-3xl md:text-5xl "><FaCarCrash></FaCarCrash></span><span className="text-black font-bold text-2xl">Trus</span> <span className="text-rose-600 font-bold text-xl md:text-2xl">Toy</span></a>
         </div>
@@ -38,23 +24,20 @@ const Topbar = () => {
     </button>
         </div>
 
-        <div className="w-2/12">
+        <div className="w-2/12 flex justify-end">
         {
-          user ? 
-          <div className=" flex justify-end gap-3">
-          <button onClick={handleLogOut} className="btn btn-active btn-ghost text-white font-semibold tracking-wider">Log Out</button>
+          user && 
+          <div>
+          
             <label tabIndex={0} className="btn flex flex-row  btn-ghost btn-circle avatar">
             
               <div title={user?.displayName} className="w-32   rounded-full">
                 <img src={user?.photoURL} className="w-full"/>
               </div>
             </label>
-          </div> :
-          <div className=" flex justify-end gap-3">
-            <Link to="/login"><button className='btn btn-active btn-ghost  text-white font-semibold tracking-wider'>Login</button></Link>
-            <Link to="/register"> <button className='btn btn-active btn-secondary text-white font-semibold tracking-wider '>Sign Up</button></Link>
           </div>
         }
+        
         </div>
       </div>
     </div>

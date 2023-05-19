@@ -14,7 +14,10 @@ const ShopCart = ({toy}) => {
               </figure>
               <div className="card-body items-left text-left">
                 <h2 className="card-title"> {toy_name}</h2>
+                <div className='flex justify-between'>
                 <p>Price: <span className='text-[#73A9AD] font-semibold'>${price}</span></p>
+                <p className='text-center'>Rating: <span className='text-[#73A9AD] font-semibold'>⭐{rating} </span></p>
+                </div>
                 <div className="card-actions w-full">
                   <button className="btn w-full bg-[#C4DFDF] hover:bg-[#D2E9E9] duration-500 border-none text-black tracking-wider ">View Details</button>
                 </div>
