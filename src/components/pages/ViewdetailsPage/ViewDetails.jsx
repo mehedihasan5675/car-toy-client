@@ -1,5 +1,5 @@
 import React from 'react';
-import { Link, useLoaderData, useNavigate } from 'react-router-dom';
+import { useLoaderData, useNavigate } from 'react-router-dom';
 
 const ViewDetails = () => {
     const toy=useLoaderData()
@@ -28,7 +28,8 @@ const ViewDetails = () => {
       <p className='text-lg font-semibold tracking-wide  my-3'>Seller email: <span className='text-slate-500 font-semibold '>{seller_email}</span></p>
       
       <p className="py-6 italic text-lg tracking-wide text-slate-500">Description: {detail_description}</p>
-      <Link to="/"><button className="btn btn-ghost w-full">Go Back</button></Link>
+     
+      <button onClick={()=>navigate(-1)} className="btn btn-ghost w-full">Go Back</button>
     </div>
   </div>
 </div>

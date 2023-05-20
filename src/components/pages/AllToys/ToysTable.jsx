@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 const ToysTable = ({ toy,index }) => {
   const {
@@ -45,7 +46,7 @@ const ToysTable = ({ toy,index }) => {
         <div className="text-sm opacity-70">{available_quantity}</div>
       </td>
       <th>
-        <button className="btn text-xs btn-ghost btn-sm">view details</button>
+        <Link to={`/view-details/${_id}`}><button className="btn text-xs btn-ghost btn-sm">view details</button></Link>
       </th>
     </tr>
   );
