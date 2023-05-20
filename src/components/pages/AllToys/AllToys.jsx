@@ -40,7 +40,7 @@ const AllToys = () => {
             }
         </> :<> 
             {
-                alltoys.slice(0,20).map((toy,i)=><ToysTable key={toy._id} index={i + 1} toy={toy}></ToysTable>)
+                alltoys.slice(0,5).map((toy,i)=><ToysTable key={toy._id} index={i + 1} toy={toy}></ToysTable>)
             }
         </>
         
@@ -53,7 +53,7 @@ const AllToys = () => {
  
 </div>
 <div className='text-center my-10'>
-                {
+                {   alltoys.length <20 ? "":
                     showall ? <button onClick={()=>setShowall(!showall)} className='btn btn-outline btn-accent font-bold '>Show less</button>:<button onClick={()=>setShowall(!showall)}  className='btn btn-outline btn-accent  font-bold '>Show more</button>
                 }
                 </div>

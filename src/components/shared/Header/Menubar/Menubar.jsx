@@ -24,7 +24,6 @@ const Menubar = () => {
     <li><ActiveLink to="/">Home</ActiveLink></li>
     <li><ActiveLink to="/alltoys">All toys</ActiveLink></li>
 
-    <li><ActiveLink to="/blog">Blogs</ActiveLink></li>
       
     {
       user ? <>
@@ -34,6 +33,8 @@ const Menubar = () => {
       
       </>
     }
+    <li><ActiveLink to="/blog">Blogs</ActiveLink></li>
+
    
     </>
 return (

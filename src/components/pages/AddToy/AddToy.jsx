@@ -3,13 +3,20 @@ import { useForm } from "react-hook-form";
 import { AuthContext } from "../../../AuthProvider/AuthProvider";
 const AddToy = () => {
     const {user}=useContext(AuthContext)
+   
   const {
     register,
     handleSubmit,
     watch,
+    reset,
     formState: { errors },
   } = useForm();
-  const onSubmit = (data) => console.log(data);
+  const onSubmit = (data) => {
+    console.log(data)
+
+    //reset the form
+    reset()
+  };
  
   return (<div className="bg-[#D2E9E9]">
   <div className=" max-w-7xl mx-auto py-10 ">
