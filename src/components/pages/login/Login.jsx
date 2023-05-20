@@ -1,9 +1,12 @@
 import React, { useContext, useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 import Swal from 'sweetalert2';
 import { AuthContext } from "../../../AuthProvider/AuthProvider";
 const Login = () => {
   const { logIn,GoogleLogIn } = useContext(AuthContext);
+  const location=useLocation()
+  const navigate=useNavigate()
+  const goTo=location?.state?.from?.pathname || '/'
   const [error, setError] = useState("");
   const handleLogInBtn = (e) => {
     e.preventDefault();
@@ -22,6 +25,8 @@ const Login = () => {
             timer:4000,
             confirmButtonText: 'Go'
           })
+
+navigate(goTo,{replace:true})
       })
       .catch((error) => {
         console.log(error.message);

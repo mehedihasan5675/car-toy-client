@@ -7,6 +7,7 @@ import Home from '../../pages/Home/Home/Home';
 import ViewDetails from '../../pages/ViewdetailsPage/ViewDetails';
 import Login from '../../pages/login/Login';
 import Register from '../../pages/register/Register';
+import PrivateRoute from '../PrivateRoute/PrivateRoute';
 
   const router = createBrowserRouter([
     {
@@ -27,7 +28,7 @@ import Register from '../../pages/register/Register';
         },
         {
           path:'view-details/:_id',
-          element:<ViewDetails></ViewDetails>,
+          element:<PrivateRoute><ViewDetails></ViewDetails></PrivateRoute>,
           loader:({params})=>fetch(`http://localhost:5000/alltoys/id/${params._id}`)
         }
       ]
