@@ -3,6 +3,7 @@ import {
   createBrowserRouter
 } from "react-router-dom";
 import MainLayout from '../../layouts/mainLayout/MainLayout';
+import AllToys from '../../pages/AllToys/AllToys';
 import Home from '../../pages/Home/Home/Home';
 import ViewDetails from '../../pages/ViewdetailsPage/ViewDetails';
 import Login from '../../pages/login/Login';
@@ -30,6 +31,11 @@ import PrivateRoute from '../PrivateRoute/PrivateRoute';
           path:'view-details/:_id',
           element:<PrivateRoute><ViewDetails></ViewDetails></PrivateRoute>,
           loader:({params})=>fetch(`http://localhost:5000/alltoys/id/${params._id}`)
+        },
+        {
+          path:'alltoys',
+          element:<AllToys></AllToys>,
+          loader:()=>fetch(`http://localhost:5000/alltoys`)
         }
       ]
     },

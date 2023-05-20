@@ -21,10 +21,10 @@ const Menubar = () => {
   }
     const navMenu=<>
     
-    <li><ActiveLink to="">Home</ActiveLink></li>
-    <li><ActiveLink to="">All Toys</ActiveLink></li>
+    <li><ActiveLink to="/">Home</ActiveLink></li>
+    <li><ActiveLink to="/alltoys">All Toys</ActiveLink></li>
 
-    <li><ActiveLink to="">Blogs</ActiveLink></li>
+    <li><ActiveLink to="/blog">Blogs</ActiveLink></li>
       
     {
       user ? <>
@@ -34,7 +34,7 @@ const Menubar = () => {
       
       </>
     }
-    <li><ActiveLink to="">Contact us</ActiveLink></li>
+   
     </>
 return (
     <div className=' max-w-7xl mx-auto '>
