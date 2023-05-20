@@ -1,9 +1,11 @@
 import React, { useContext } from "react";
 import { useForm } from "react-hook-form";
+import Swal from "sweetalert2";
 import { AuthContext } from "../../../AuthProvider/AuthProvider";
 const AddToy = () => {
     const {user}=useContext(AuthContext)
-   
+    
+
   const {
     register,
     handleSubmit,
@@ -12,10 +14,38 @@ const AddToy = () => {
     formState: { errors },
   } = useForm();
   const onSubmit = (data) => {
-    console.log(data)
-
     //reset the form
     reset()
+
+    fetch(`http://localhost:5000/addtoy`,{
+        method:"POST",
+        headers:{
+            'content-type':'application/json'
+        },
+        body:JSON.stringify(data)
+    })
+    .then((res)=>res.json())
+    .then(data=>{
+        console.log(data);
+        if(data.insertedId){
+            Swal.fire({
+                title: 'Success!',
+                text: 'Toy Added Successfully',
+                icon: 'success',
+                confirmButtonText: 'Cool'
+              })
+        }
+    })
+    .catch(error=>console.log(error))
+
+
+
+
+    
+
+
+
+
   };
  
   return (<div className="bg-[#D2E9E9]">
@@ -35,7 +65,7 @@ const AddToy = () => {
       <label className="label">
             <span className="label-text text-slate-400 font-semibold tracking-wider text-base">Seller Name</span>
           </label>
-      <input readOnly defaultValue={user.displayName} className="rounded-md w-full outline-none px-2 tracking-wide text-slate-500 py-2" {...register("seller_name", { required: true })} />
+      <input readOnly defaultValue={user?.displayName} className="rounded-md w-full outline-none px-2 tracking-wide text-slate-500 py-2" {...register("seller_name", { required: true })} />
       </div>
       
       </div>
@@ -46,7 +76,7 @@ const AddToy = () => {
       <label className="label">
             <span className="label-text text-slate-400 font-semibold tracking-wider text-base">Seller Email</span>
           </label>
-      <input readOnly className="rounded-md w-full outline-none  px-2 tracking-wide  text-slate-500 py-2"  defaultValue={user.email} {...register("seller_email")} />
+      <input readOnly className="rounded-md w-full outline-none  px-2 tracking-wide  text-slate-500 py-2"  defaultValue={user?.email} {...register("seller_email")} />
       </div>
       
       {/* include validation with required or other standard HTML validation rules */}
@@ -70,7 +100,8 @@ const AddToy = () => {
             <label className="label">
             <span className="label-text text-slate-400 font-semibold tracking-wider text-base">rating</span>
           </label>
-      <input className="rounded-md w-full outline-slate-300  px-2 tracking-wide text-slate-500 py-2" defaultValue="5" {...register("rating",{ required: true })} />
+      <input className="rounded-md w-full outline-slate-300  px-2 tracking-wide text-slate-500 py-2" defaultValue="5" {...register("rating",{ required: true, min: 0, max: 5  })} />
+      
             </div>
 
             <div className="w-full">
@@ -78,7 +109,9 @@ const AddToy = () => {
             <span className="label-text text-slate-400 font-semibold tracking-wider text-base">Quantity</span>
           </label>
       <input defaultValue={10} className="rounded-md w-full outline-slate-300  px-2 tracking-wide text-slate-500 py-2" {...register("available_quantity", { required: true })} />
+      
             </div>
+            
       </div>
       
       {/* include validation with required or other standard HTML validation rules */}
@@ -92,6 +125,7 @@ const AddToy = () => {
         <option value="Regular Cars">Regular Cars</option>
         <option value="Mini Police Cars">Mini Police Cars</option>
       </select>
+      
       </div>
       
       </div>
@@ -101,6 +135,7 @@ const AddToy = () => {
 
 
       <div className="w-full flex flex-col gap-5 ">
+      {errors.rating && <span className="text-red-500">Rating between 0 to 5 number.</span>}
       <div className=" w-full">
       <label className="label">
             <span className="label-text text-slate-400 font-semibold tracking-wider text-base">Photo URL</span>
@@ -118,13 +153,12 @@ const AddToy = () => {
       
       </div>
       {/* errors will return when field validation fails  */}
-      <div className="mt-2 ">
-      {errors.exampleRequired && <span>This field is required</span>}
-      </div>
+     
       
       
       <input className="btn w-3/12 btn-ghost btn-outline mt-10" type="submit" />
     </form>
+  
   </div>
   </div>)
 };

@@ -27,7 +27,7 @@ const Menubar = () => {
       
     {
       user ? <>
-    <li><ActiveLink to="">My toys</ActiveLink></li>
+    <li><ActiveLink to="/mytoys">My toys</ActiveLink></li>
     <li><ActiveLink to="/addtoy">Add a toy</ActiveLink></li>
       </>:<>
       

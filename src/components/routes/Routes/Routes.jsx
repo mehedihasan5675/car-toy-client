@@ -6,6 +6,7 @@ import MainLayout from '../../layouts/mainLayout/MainLayout';
 import AddToy from '../../pages/AddToy/AddToy';
 import AllToys from '../../pages/AllToys/AllToys';
 import Home from '../../pages/Home/Home/Home';
+import MyToy from '../../pages/MyToy/MyToy';
 import ViewDetails from '../../pages/ViewdetailsPage/ViewDetails';
 import Login from '../../pages/login/Login';
 import Register from '../../pages/register/Register';
@@ -41,6 +42,10 @@ import PrivateRoute from '../PrivateRoute/PrivateRoute';
         {
           path:'addtoy',
           element:<PrivateRoute><AddToy></AddToy></PrivateRoute>
+        },
+        {
+          path:'mytoys',
+          element:<PrivateRoute><MyToy></MyToy></PrivateRoute>
         }
       ]
     },
