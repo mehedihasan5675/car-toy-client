@@ -65,7 +65,7 @@ const AddToy = () => {
       <label className="label">
             <span className="label-text text-slate-400 font-semibold tracking-wider text-base">Seller Name</span>
           </label>
-      <input readOnly defaultValue={user?.displayName} className="rounded-md w-full outline-none px-2 tracking-wide text-slate-500 py-2" {...register("seller_name", { required: true })} />
+      <input  defaultValue={user?.displayName} className="rounded-md w-full outline-none px-2 tracking-wide text-slate-500 py-2" {...register("seller_name", { required: true })} />
       </div>
       
       </div>

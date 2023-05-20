@@ -43,18 +43,18 @@ console.log(mytoys);
         <th>Sub-category</th>
         <th>Price</th>
         <th> Quantity</th>
-        <th><p className='ml-3'>View Details</p></th>
+        <th><p className='ml-3'>actions</p></th>
       </tr>
     </thead>
     <tbody>
       {
         showall ? <> 
             {
-                mytoys.map((toy,i)=><MyToyTable key={toy._id} index={i + 1} toy={toy}></MyToyTable>)
+                mytoys.map((toy,i)=><MyToyTable mytoys={mytoys} setMytoys={setMytoys} key={toy._id} index={i + 1} toy={toy}></MyToyTable>)
             }
         </> :<> 
             {
-                mytoys.slice(0,20).map((toy,i)=><MyToyTable key={toy._id} index={i + 1} toy={toy}></MyToyTable>)
+                mytoys.slice(0,10).map((toy,i)=><MyToyTable mytoys={mytoys} setMytoys={setMytoys} key={toy._id} index={i + 1} toy={toy}></MyToyTable>)
             }
         </>
         
