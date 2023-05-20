@@ -22,14 +22,14 @@ const Menubar = () => {
     const navMenu=<>
     
     <li><ActiveLink to="/">Home</ActiveLink></li>
-    <li><ActiveLink to="/alltoys">All Toys</ActiveLink></li>
+    <li><ActiveLink to="/alltoys">All toys</ActiveLink></li>
 
     <li><ActiveLink to="/blog">Blogs</ActiveLink></li>
       
     {
       user ? <>
-    <li><ActiveLink to="">My Toys</ActiveLink></li>
-    <li><ActiveLink to="">Add A Toy</ActiveLink></li>
+    <li><ActiveLink to="">My toys</ActiveLink></li>
+    <li><ActiveLink to="/addtoy">Add a toy</ActiveLink></li>
       </>:<>
       
       </>
