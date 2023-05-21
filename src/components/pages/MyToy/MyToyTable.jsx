@@ -3,6 +3,7 @@ import { FaEdit, FaEye, FaTrashAlt } from "react-icons/fa";
 import { Link } from "react-router-dom";
 import Swal from "sweetalert2";
 const MyToyTable = ({ toy, index,mytoys,setMytoys }) => {
+ 
   const {
     picture,
     price,
@@ -42,6 +43,7 @@ const MyToyTable = ({ toy, index,mytoys,setMytoys }) => {
 
   return (
     <tr>
+      
       <th>
         <label>
           <p>{index}</p>
@@ -83,9 +85,9 @@ const MyToyTable = ({ toy, index,mytoys,setMytoys }) => {
               <FaTrashAlt className="w-5 text-red-500 h-5"></FaTrashAlt>
             </button>
           </Link>
-          <Link>
-            <button className="btn text-xs btn-ghost  btn-sm">
-              <FaEdit className="w-5 text-warning h-5"></FaEdit>
+          <Link to={`/editToy/${_id}`}>
+            <button  className="btn text-xs btn-ghost  btn-sm">
+              <FaEdit  className="w-5 text-warning h-5"></FaEdit>
             </button>
           </Link>
           <Link to={`/view-details/${_id}`}>
@@ -93,6 +95,10 @@ const MyToyTable = ({ toy, index,mytoys,setMytoys }) => {
               <FaEye className="w-5  h-5"></FaEye>
             </button>
           </Link>
+
+          
+      
+          
         </div>
       </th>
     </tr>
