@@ -12,7 +12,7 @@ const Topbar = () => {
       <div className="navbar gap-5 flex  max-w-7xl mx-auto  justify-between">
         <Link to="/">
         <div className="navbar flex-shrink-0 w-4/12">
-          <a className="btn px-0 btn-ghost  normal-case text-xl"><span className="text-[#376060]   text-3xl md:text-5xl "><FaCarCrash></FaCarCrash></span><span className="text-black font-bold text-2xl">Trus</span> <span className="text-rose-600 font-bold text-xl md:text-2xl">Toy</span></a>
+          <p className="btn px-0 btn-ghost  normal-case text-xl"><span className="text-[#376060]   text-3xl md:text-5xl "><FaCarCrash></FaCarCrash></span><span className="text-black font-bold text-2xl">Trus</span> <span className="text-rose-600 font-bold text-xl md:text-2xl">Toy</span></p>
         </div>
         </Link>
 

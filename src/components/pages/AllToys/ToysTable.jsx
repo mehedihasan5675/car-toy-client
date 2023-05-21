@@ -40,7 +40,7 @@ const ToysTable = ({ toy,index }) => {
         <div className="text-sm opacity-70">{sub_category}</div>
       </td>
       <td>
-        <div className="text-sm opacity-70">{price}</div>
+        <div className="text-sm opacity-70">$ {price}</div>
       </td>
       <td>
         <div className="text-sm opacity-70">{available_quantity}</div>

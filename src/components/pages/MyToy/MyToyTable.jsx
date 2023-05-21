@@ -25,7 +25,7 @@ const MyToyTable = ({ toy, index,mytoys,setMytoys }) => {
       confirmButtonText: "Yes, delete it!",
     }).then((result) => {
       if (result.isConfirmed) {
-        fetch(`http://localhost:5000/toydelete/${id}`, {
+        fetch(`https://server-cars-toy.vercel.app/toydelete/${id}`, {
           method: "DELETE",
         })
           .then((res) => res.json())
@@ -70,7 +70,7 @@ const MyToyTable = ({ toy, index,mytoys,setMytoys }) => {
         <div className="text-sm opacity-70">{sub_category}</div>
       </td>
       <td>
-        <div className="text-sm opacity-70">{price}</div>
+        <div className="text-sm opacity-70">$ {price}</div>
       </td>
       <td>
         <div className="text-sm opacity-70">{available_quantity}</div>

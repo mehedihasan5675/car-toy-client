@@ -5,7 +5,7 @@ import { Tab, TabList, TabPanel, Tabs } from "react-tabs";
 import "react-tabs/style/react-tabs.css";
 import market from "../../../../assets/market.json";
 import truck from "../../../../assets/truck.json";
-import ShopCart from "./shopCart";
+import ShopCart from "./ShopCart";
 const ShopCategory = () => {
     const [toys,setToys]=useState([])
     const [categoryName,setCategoryName]=useState('Sports Cars')
@@ -13,10 +13,9 @@ const ShopCategory = () => {
       setCategoryName(cateName)
 
     }
-    console.log(categoryName);
 
     useEffect(()=>{
-        fetch(`http://localhost:5000/alltoys/${categoryName}`)
+        fetch(`https://server-cars-toy.vercel.app/alltoys/${categoryName}`)
         .then(res=>res.json())
         .then(data=>{
             setToys(data)

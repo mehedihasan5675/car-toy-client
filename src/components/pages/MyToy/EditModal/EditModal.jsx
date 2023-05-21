@@ -30,7 +30,7 @@ const EditModal = () => {
             price,quantity,description
         }
         console.log(editedData);
-fetch(`http://localhost:5000/updateToy/${_id}`,
+fetch(`https://server-cars-toy.vercel.app/updateToy/${_id}`,
 {
   method:"PATCH",
   headers:{

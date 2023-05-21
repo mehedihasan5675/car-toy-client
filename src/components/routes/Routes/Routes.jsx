@@ -6,6 +6,7 @@ import {
 import MainLayout from '../../layouts/mainLayout/MainLayout';
 import AddToy from '../../pages/AddToy/AddToy';
 import AllToys from '../../pages/AllToys/AllToys';
+import Blog from '../../pages/Blog/Blog';
 import ErrorPage from '../../pages/ErrorPage/ErrorPage';
 import Home from '../../pages/Home/Home/Home';
 import EditModal from '../../pages/MyToy/EditModal/EditModal';
@@ -35,12 +36,12 @@ import PrivateRoute from '../PrivateRoute/PrivateRoute';
         {
           path:'view-details/:_id',
           element:<PrivateRoute><ViewDetails></ViewDetails></PrivateRoute>,
-          loader:({params})=>fetch(`http://localhost:5000/alltoys/id/${params._id}`)
+          loader:({params})=>fetch(`https://server-cars-toy.vercel.app/alltoys/id/${params._id}`)
         },
         {
           path:'alltoys',
           element:<AllToys></AllToys>,
-          loader:()=>fetch(`http://localhost:5000/alltoys`)
+          loader:()=>fetch(`https://server-cars-toy.vercel.app/alltoys`)
         },
         {
           path:'addtoy',
@@ -53,7 +54,11 @@ import PrivateRoute from '../PrivateRoute/PrivateRoute';
         ,{
           path:'editToy/:id',
           element:<EditModal></EditModal>,
-          loader:({params})=>fetch(`http://localhost:5000/alltoys/id/${params.id}`)
+          loader:({params})=>fetch(`https://server-cars-toy.vercel.app/alltoys/id/${params.id}`)
+        },
+        {
+          path:'blog',
+          element:<Blog></Blog>
         },
         {
           path:'*',

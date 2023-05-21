@@ -12,7 +12,7 @@ const AllToys = () => {
       e.preventDefault()
 const searchBy=e.target.searchText.value 
 
-fetch(`http://localhost:5000/toySearch/${searchBy}`)
+fetch(`https://server-cars-toy.vercel.app/toySearch/${searchBy}`)
 .then(res=>res.json())
 .then(data=>{
   setAllToys(data)
@@ -20,12 +20,12 @@ fetch(`http://localhost:5000/toySearch/${searchBy}`)
     }
     return (
         <div>
-           <form onSubmit={handleSearchBtn} className="form-control mx-auto flex flex-row my-5 gap-3 w-full max-w-xs">
+           <form onSubmit={handleSearchBtn} className="form-control justify-center mx-auto flex flex-row my-5 gap-3 w-full max-w-xl">
   
-  <input type="text" name='searchText' placeholder="Type here" className="input input-bordered   max-w-xs" />
-  <input type='submit' value="Search"  className='btn btn-ghost border-2 border-gray-300'/>
+  <input type="text" name='searchText' placeholder="Search toy..." className="input input-bordered   w-4/6" />
+  <input type='submit' value="Search"  className='btn w-1/6 btn-ghost border-2 border-gray-300'/>
 </form>
-            <div className="overflow-x-auto mx-auto max-w-7xl">
+            <div className="overflow-x-auto min-h-screen mx-auto max-w-7xl">
            
   <table className="table w-full">
     {/* head */}

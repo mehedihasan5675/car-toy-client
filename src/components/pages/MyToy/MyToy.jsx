@@ -14,7 +14,7 @@ const handleSort=(sortBy)=>{
 setColorBtn(sortBy)
 
 
-  fetch(`http://localhost:5000/mytoys/${user?.email}`,{
+  fetch(`https://server-cars-toy.vercel.app/mytoys/${user?.email}`,{
     method:"POST",
     headers:{
       'content-type':'application/json'
@@ -31,7 +31,7 @@ setColorBtn(sortBy)
 
 }
     useEffect(()=>{
-        fetch(`http://localhost:5000/mytoys/${user?.email}`,{
+        fetch(`https://server-cars-toy.vercel.app/mytoys/${user?.email}`,{
           method:"GET",  
         })
         .then(res=>res.json())
@@ -41,8 +41,8 @@ setColorBtn(sortBy)
         .catch(error=>console.log(error))
     },[])
     return (
-        <div>
-            <div className="overflow-x-auto mx-auto max-w-7xl">
+        <>
+            <div className="overflow-x-auto mx-auto min-h-screen max-w-7xl">
             <div className='flex justify-end gap-2 my-5'>
             <button onClick={()=>handleSort('ascending')} className={`btn btn-sm bg-gray-400 border-none ${colorBtn =="ascending" && 'bg-gray-600'}`}>Ascending</button>
       <button onClick={()=>handleSort('descending')} className={`btn btn-sm bg-gray-400 border-none ${colorBtn =="descending" && 'bg-gray-600'}`}>descending</button>
@@ -98,7 +98,7 @@ setColorBtn(sortBy)
                     showall ? <button onClick={()=>setShowall(!showall)} className='btn btn-outline btn-accent font-bold '>Show less</button>:<button onClick={()=>setShowall(!showall)}  className='btn btn-outline btn-accent  font-bold '>Show more</button>
                 }
                 </div>
-        </div>
+        </>
     );
 };
 
