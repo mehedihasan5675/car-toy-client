@@ -1,11 +1,16 @@
+import AOS from 'aos';
+import 'aos/dist/aos.css';
+
 import React from 'react';
 import { Link } from 'react-router-dom';
+
 const ShopCart = ({toy}) => {
+  AOS.init()
     // console.log(toy)
     const {picture,price,rating,toy_name,_id}=toy
     return (
-        <div className='mx-auto '>
-            <div className="card w-96 lg:w-80 xl:w-96 bg-base-100 shadow-xl">
+        <div  className='mx-auto '>
+            <div data-aos="fade-right" data-aos-duration="1000" className="card w-96 lg:w-80 xl:w-96 bg-base-100 shadow-xl">
               <figure className="px-5 h-64   pt-5">
                 <img
                   src={picture}

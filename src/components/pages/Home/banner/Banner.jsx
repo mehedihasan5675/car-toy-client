@@ -1,20 +1,25 @@
+import AOS from 'aos';
+import 'aos/dist/aos.css';
+
 import React from "react";
 import Marquee from "react-fast-marquee";
 import banner1 from "../../../../../public/banner-1.jpg";
 import banner3 from "../../../../../public/banner-2.jpg";
 import banner2 from "../../../../../public/banner-7.jpg";
 import banner4 from "../../../../../public/banner-8.jpg";
+
 const Banner = () => {
+  AOS.init();
 
 
   return (
     <div>
       <div className="carousel w-full ">
         <div id="slide1" className="carousel-item    relative w-full">
-          <img src={banner1} className="w-full max-h-screen" />
+          <img src={banner2} className="w-full max-h-screen" />
           <div className="absolute   top-0 left-0 w-full h-full bg-black bg-opacity-40  ">
-            <div className="max-w-7xl mx-auto ">
-              <h4 className="text-white w-4/6 md:w-3/6 tracking-wider leading-8 capitalize md:text-4xl italic  text-2xl  ml-24 mt-[40%]">"Rev Up the Fun: Explore our Fantastic Cars Toy Collection!"</h4>
+            <div  className="max-w-7xl mx-auto ">
+              <h4   data-aos="fade-right" className="text-white w-4/6 md:w-4/6 tracking-wider leading-8 capitalize md:text-4xl italic  text-2xl  ml-24 mt-[36%]">"Rev Up the Fun: Explore our Fantastic Cars Toy Collection!"</h4>
             </div>
           </div>
 
@@ -36,10 +41,10 @@ const Banner = () => {
           </div>
         </div>
         <div id="slide2" className="carousel-item - relative w-full">
-          <img src={banner2} className="w-full max-h-screen" />
+          <img src={banner1} className="w-full max-h-screen" />
           <div className="absolute  top-0 left-0 w-full h-full bg-black bg-opacity-40  ">
-            <div className="max-w-7xl mx-auto ">
-              <h4 className="text-white w-4/6 md:w-3/6 tracking-wider leading-8 capitalize md:text-4xl italic  text-2xl  ml-24 mt-[35%]">"Cruising into Adventure: Discover the Best Cars Toys Online!"</h4>
+            <div  className="max-w-7xl mx-auto ">
+              <h4   data-aos="fade-right" className="text-white w-4/6 md:w-4/6 tracking-wider leading-8 capitalize md:text-4xl italic  text-2xl  ml-24 mt-[35%]">"Cruising into Adventure: Discover the Best Cars Toys Online!"</h4>
             </div>
           </div>
           <div className="absolute max-w-7xl mx-auto  flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
@@ -60,8 +65,8 @@ const Banner = () => {
         <div id="slide3" className="carousel-item - relative w-full">
           <img src={banner3} className="w-full max-h-screen" />
           <div className="absolute  top-0 left-0 w-full h-full bg-black bg-opacity-40  ">
-            <div className="max-w-7xl mx-auto ">
-              <h4 className="text-white w-4/6 md:w-3/6 tracking-wider leading-8 capitalize md:text-4xl italic  text-2xl  ml-24 mt-[35%]">"Race to Playtime: Unleash Your Imagination with our Cars Toy Universe!"</h4>
+            <div  className="max-w-7xl mx-auto ">
+              <h4   data-aos="fade-right" className="text-white w-4/6 md:w-4/6 tracking-wider leading-8 capitalize md:text-4xl italic  text-2xl  ml-24 mt-[35%]">"Race to Playtime: Unleash Your Imagination with our Cars Toy Universe!"</h4>
             </div>
           </div>
           <div className="absolute max-w-7xl mx-auto  flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
@@ -82,8 +87,8 @@ const Banner = () => {
         <div id="slide4" className="carousel-item - relative w-full">
           <img src={banner4} className="w-full max-h-screen" />
           <div className="absolute  top-0 left-0 w-full h-full bg-black bg-opacity-40  ">
-            <div className="max-w-7xl mx-auto ">
-              <h4 className="text-white w-4/6 md:w-3/6 tracking-wider leading-8 capitalize md:text-4xl italic  text-2xl  ml-24 mt-[35%]">"The Joy of Motion: Embrace the Magic of Cars Toys on our Website!"</h4>
+            <div  className="max-w-7xl mx-auto ">
+              <h4   data-aos="fade-right" className="text-white w-4/6 md:w-4/6 tracking-wider leading-8 capitalize md:text-4xl italic  text-2xl  ml-24 mt-[35%]">"The Joy of Motion: Embrace the Magic of Cars Toys on our Website!"</h4>
             </div>
           </div>
           <div className="absolute max-w-7xl mx-auto  flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
@@ -105,9 +110,9 @@ const Banner = () => {
 
 
 
-      <div className="max-w-7xl overflow-hidden md:mx-auto mx-3 md:-mt-20 -mt-12  relative rounded-full py-2  md:py-6 bg-[#D2E9E9]">
+      <div   className="max-w-7xl overflow-hidden md:mx-auto mx-3 md:-mt-20 -mt-12  relative rounded-full py-2 md:mb-10 mb-5  md:py-6 bg-[#D2E9E9]">
         <p className="italic  text-xl left-1/2 -translate-x-1/2  absolute top-2 text-gray-500 text-center font-semibold md:text-2xl">Connected with</p>
-            <div className="mt-8  md:pb-1  ">
+            <div data-aos="fade-left" className="mt-8  md:pb-1  ">
                 <Marquee className="">
                 <img className="md:w-28 mr-16 w-16 h-16  md:h-28 rounded-full" src="https://img.freepik.com/free-vector/branding-identity-corporate-logo-vector-design-template_460848-13994.jpg?w=740&t=st=1684402039~exp=1684402639~hmac=ea7d9ab5d2508bc94e4ad3e13db84e1b9604b9336b7bde3800441a38d97456eb" alt="" />
 

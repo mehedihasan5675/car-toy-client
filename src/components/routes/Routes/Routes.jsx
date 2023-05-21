@@ -1,10 +1,12 @@
 import React from 'react';
 import {
+  Navigate,
   createBrowserRouter
 } from "react-router-dom";
 import MainLayout from '../../layouts/mainLayout/MainLayout';
 import AddToy from '../../pages/AddToy/AddToy';
 import AllToys from '../../pages/AllToys/AllToys';
+import ErrorPage from '../../pages/ErrorPage/ErrorPage';
 import Home from '../../pages/Home/Home/Home';
 import EditModal from '../../pages/MyToy/EditModal/EditModal';
 import MyToy from '../../pages/MyToy/MyToy';
@@ -52,8 +54,18 @@ import PrivateRoute from '../PrivateRoute/PrivateRoute';
           path:'editToy/:id',
           element:<EditModal></EditModal>,
           loader:({params})=>fetch(`http://localhost:5000/alltoys/id/${params.id}`)
+        },
+        {
+          path:'*',
+          element:<Navigate to="error"></Navigate>
         }
       ]
     },
+    ,
+    {
+      path:'error',
+      element:<ErrorPage></ErrorPage>,
+      
+    }
   ]);
 export default router;
