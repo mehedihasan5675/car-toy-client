@@ -42,6 +42,7 @@ const MyToyTable = ({ toy, index,mytoys,setMytoys }) => {
   };
 
   return (
+    
     <tr>
       
       <th>
