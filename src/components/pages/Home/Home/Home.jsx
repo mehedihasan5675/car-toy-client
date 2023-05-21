@@ -1,12 +1,14 @@
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 import React, { useEffect, useState } from 'react';
+import useTitle from '../../../../hook/useTitle/useTitle';
 import Banner from '../banner/Banner';
 import Gallery from '../gallery/Gallery';
 import ShopCategory from '../shopByCategory/ShopCategory';
 import Testimonial from '../testimonial/Testimonial';
 import ShopNow from './ShopNow/ShopNow';
 const Home = () => {
+    useTitle('Home')
     AOS.init()
     const [imgUrl,setImgUrl]=useState([])
     const [showall,setShowall]=useState(false)

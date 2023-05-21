@@ -1,8 +1,10 @@
 import React from 'react';
 import { useLoaderData, useNavigate } from 'react-router-dom';
 import Swal from 'sweetalert2';
+import useTitle from '../../../../hook/useTitle/useTitle';
 
 const EditModal = () => {
+  useTitle('Update Toy')
     const editToy=useLoaderData()
     const navigate=useNavigate()
     console.log(editToy);
@@ -38,7 +40,6 @@ fetch(`http://localhost:5000/updateToy/${_id}`,
 })
 .then(res=>res.json())
 .then(data=>{
-    console.log(data);
     if(data.modifiedCount > 0){
       // Swal.fire("Deleted!", "Your toy has been deleted.", "success");
       Swal.fire({

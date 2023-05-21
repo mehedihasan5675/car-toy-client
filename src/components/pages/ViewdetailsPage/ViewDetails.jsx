@@ -1,8 +1,10 @@
 import React from 'react';
 import { useLoaderData, useNavigate } from 'react-router-dom';
+import useTitle from '../../../hook/useTitle/useTitle';
 
 const ViewDetails = () => {
     const toy=useLoaderData()
+    useTitle('View details')
     const navigate=useNavigate()
     const {picture,price,rating,sub_category,seller_name,seller_email,available_quantity,toy_name,_id,detail_description}=toy
     console.log(toy);

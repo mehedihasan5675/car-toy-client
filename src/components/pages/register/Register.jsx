@@ -3,9 +3,10 @@ import React, { useContext, useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import Swal from 'sweetalert2';
 import { AuthContext } from '../../../AuthProvider/AuthProvider';
+import useTitle from '../../../hook/useTitle/useTitle';
 const Register = () => {
     const navigate=useNavigate()
-
+    useTitle('Register')
     const {createUser,logOut}=useContext(AuthContext)
     const [error,setError]=useState('')
     const handleRegisterBtn=(e)=>{

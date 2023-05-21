@@ -30,10 +30,9 @@ const MyToyTable = ({ toy, index,mytoys,setMytoys }) => {
         })
           .then((res) => res.json())
           .then((data) => {
-            console.log(data);
             if (data.deletedCount > 0) {
               Swal.fire("Deleted!", "Your toy has been deleted.", "success");
-              const remaining=mytoys.filter((toy)=>toy._id !== id)
+              const remaining=mytoys?.filter((toy)=>toy._id !== id)
               setMytoys(remaining)
             }
           });

@@ -2,9 +2,10 @@ import React, { useContext } from "react";
 import { useForm } from "react-hook-form";
 import Swal from "sweetalert2";
 import { AuthContext } from "../../../AuthProvider/AuthProvider";
+import useTitle from "../../../hook/useTitle/useTitle";
 const AddToy = () => {
     const {user}=useContext(AuthContext)
-    
+    useTitle('Add a Toy')
 
   const {
     register,
@@ -26,7 +27,6 @@ const AddToy = () => {
     })
     .then((res)=>res.json())
     .then(data=>{
-        console.log(data);
         if(data.insertedId){
             Swal.fire({
                 title: 'Success!',

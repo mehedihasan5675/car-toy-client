@@ -1,11 +1,12 @@
 import React, { useContext, useEffect, useState } from 'react';
 import { AuthContext } from '../../../AuthProvider/AuthProvider';
+import useTitle from '../../../hook/useTitle/useTitle';
 import MyToyTable from './MyToyTable';
 
 const MyToy = () => {
     const {user}=useContext(AuthContext)
     const [colorBtn,setColorBtn]=useState('')
-
+    useTitle('MyToys')
     const [mytoys,setMytoys]=useState([])
     const [showall,setShowall]=useState(false)
     console.log(colorBtn);
@@ -76,11 +77,11 @@ setColorBtn(sortBy)
       {
         showall ? <> 
             {
-                mytoys.map((toy,i)=><MyToyTable mytoys={mytoys} setMytoys={setMytoys} key={toy._id} index={i + 1} toy={toy}></MyToyTable>)
+                mytoys?.map((toy,i)=><MyToyTable mytoys={mytoys} setMytoys={setMytoys} key={toy._id} index={i + 1} toy={toy}></MyToyTable>)
             }
         </> :<> 
             {
-                mytoys.slice(0,10).map((toy,i)=><MyToyTable mytoys={mytoys} setMytoys={setMytoys} key={toy._id} index={i + 1} toy={toy}></MyToyTable>)
+                mytoys?.slice(0,10).map((toy,i)=><MyToyTable mytoys={mytoys} setMytoys={setMytoys} key={toy._id} index={i + 1} toy={toy}></MyToyTable>)
             }
         </>
         

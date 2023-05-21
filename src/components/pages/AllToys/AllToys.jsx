@@ -1,9 +1,11 @@
 import React, { useState } from 'react';
 import { useLoaderData } from 'react-router-dom';
+import useTitle from '../../../hook/useTitle/useTitle';
 import ToysTable from './ToysTable';
 
 const AllToys = () => {
     const alltoys=useLoaderData()
+    useTitle('All Toys')
     const [showall,setShowall]=useState(false)
     return (
         <div>

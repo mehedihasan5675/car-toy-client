@@ -2,10 +2,12 @@ import React, { useContext, useState } from "react";
 import { Link, useLocation, useNavigate } from "react-router-dom";
 import Swal from 'sweetalert2';
 import { AuthContext } from "../../../AuthProvider/AuthProvider";
+import useTitle from "../../../hook/useTitle/useTitle";
 const Login = () => {
   const { logIn,GoogleLogIn } = useContext(AuthContext);
   const location=useLocation()
   const navigate=useNavigate()
+  useTitle('Login')
   const goTo=location?.state?.from?.pathname || '/'
   const [error, setError] = useState("");
   const handleLogInBtn = (e) => {
