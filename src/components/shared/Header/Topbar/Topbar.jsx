@@ -1,5 +1,6 @@
 import React, { useContext } from "react";
 import { FaCarCrash } from 'react-icons/fa';
+import { Link } from "react-router-dom";
 import { AuthContext } from "../../../../AuthProvider/AuthProvider";
 const Topbar = () => {
   const {user,logOut}=useContext(AuthContext)
@@ -9,9 +10,11 @@ const Topbar = () => {
   return (
     <div className="bg-[#C4DFDF] ">
       <div className="navbar gap-5 flex  max-w-7xl mx-auto  justify-between">
+        <Link to="/">
         <div className="navbar flex-shrink-0 w-4/12">
           <a className="btn px-0 btn-ghost  normal-case text-xl"><span className="text-[#376060]   text-3xl md:text-5xl "><FaCarCrash></FaCarCrash></span><span className="text-black font-bold text-2xl">Trus</span> <span className="text-rose-600 font-bold text-xl md:text-2xl">Toy</span></a>
         </div>
+        </Link>
 
         <div className="form-control relative w-6/12">
           <input 
