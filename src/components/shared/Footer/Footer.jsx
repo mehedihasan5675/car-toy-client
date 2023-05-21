@@ -1,9 +1,10 @@
 import React from "react";
 import { FaCarCrash } from 'react-icons/fa';
+import { Link } from "react-router-dom";
 const Footer = () => {
   return (
     <div >
-      <h3 style={{borderBottomRightRadius:'40px',borderTopLeftRadius:'40px'}} className='font-bold text-2xl md:text-4xl italic tracking-wider text-center  px-5 py-2 bg-[#C4DFDF] text-gray-600 w-1/2 mx-auto  '>Thanks for contact</h3>
+      <h3 style={{borderBottomRightRadius:'40px',borderTopLeftRadius:'40px'}} className='font-bold text-2xl md:text-4xl italic tracking-wider text-center  px-5 py-2 bg-[#C4DFDF] text-gray-600 w-full md:w-1/2 mx-auto  '>Thanks for contact</h3>
       <footer className=" bg-[#E3F4F4]">
       
       <div className="max-w-7xl mx-auto py-10 ">
@@ -13,17 +14,17 @@ const Footer = () => {
             
         <div>
           <span className="footer-title">Services</span>
-          <a className="link link-hover">Branding</a>
-          <a className="link link-hover">Design</a>
+          <a className="link lnk-hover">Branding</a>
+          <a className="link link-hover">Toys Sell </a>
           <a className="link link-hover">Marketing</a>
           <a className="link link-hover">Advertisement</a>
         </div>
         <div>
           <span className="footer-title">Company</span>
-          <a className="link link-hover">About us</a>
-          <a className="link link-hover">Contact</a>
-          <a className="link link-hover">Jobs</a>
-          <a className="link link-hover">Press kit</a>
+          <Link to="/" className=" ">Home</Link>
+          <Link to="/blog" className=" ">Blog</Link>
+          <Link to="/login" className=" ">Login</Link>
+          <Link to="/register" className=" ">Register</Link>
         </div>
         <div>
           <span className="footer-title">Legal</span>

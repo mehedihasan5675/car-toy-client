@@ -15,7 +15,7 @@ const Testimonial = () => {
   };
   return (
     <div className="max-w-7xl mx-auto px-5">
-        <h3 style={{borderBottomRightRadius:'40px',borderTopLeftRadius:'40px'}} className='font-bold text-2xl md:text-4xl italic tracking-wider text-center mt-16 px-5 py-2 bg-[#C4DFDF] text-gray-600 w-1/2 mx-auto  '>Testimonial</h3>
+        <h3 style={{borderBottomRightRadius:'40px',borderTopLeftRadius:'40px'}} className='font-bold text-2xl md:text-4xl italic tracking-wider text-center mt-16 px-5 py-2 bg-[#C4DFDF] text-gray-600 w-full md:w-1/2 mx-auto  '>Testimonial</h3>
       <Slider {...settings}>
         <div className="flex justify-center ">
           <div style={{borderRadius:'0px',padding:'20px 0px'}} className="card h-[450px] w-full mx-auto    bg-[#E3F4F4] ">

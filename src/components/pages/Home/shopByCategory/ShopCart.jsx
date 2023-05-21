@@ -25,7 +25,7 @@ const ShopCart = ({toy}) => {
     }
     return (
         <div  className='mx-auto '>
-            <div data-aos="fade-right" data-aos-duration="1000" className="card w-96 lg:w-80 xl:w-96 bg-base-100 shadow-xl">
+            <div data-aos="fade-up" data-aos-duration="1000" className="card  w-80 lg:w-80 xl:w-96 bg-base-100 shadow-xl">
               <figure className="px-5 h-64   pt-5">
                 <img
                   src={picture}

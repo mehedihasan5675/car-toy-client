@@ -31,9 +31,7 @@ setColorBtn(sortBy)
 
 }
     useEffect(()=>{
-        fetch(`https://server-cars-toy.vercel.app/mytoys/${user?.email}`,{
-          method:"GET",  
-        })
+        fetch(`https://server-cars-toy.vercel.app/mytoys/${user?.email}`)
         .then(res=>res.json())
         .then(data=>{
             setMytoys(data)
